@@ -1,13 +1,704 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Roboto:wght@300;400&display=swap");
+:root {
+  --gradient: linear-gradient(
+    103.24deg,
+    rgba(0, 8, 29, 0.9) 23.83%,
+    rgba(0, 8, 29, 0.3) 96.1%
+  );
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  border: border-box;
+}
+
+.Image {
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../public/IMAGES/Netflix.jpg");
+  /* background-image: url(../IMAGES/Netflix.jpg); */
+}
+
+.backgroundEffect {
+  /* position: relative; */
+  background: var(--gradient);
+  height: 100vh;
+  width: 100%;
+}
+
+.Landing {
+  height: 100vh;
+  width: 100%;
+  /* position: fixed; */
+  background-image: url("../public/IMAGES/Netflix.jpg");
+}
+.nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+}
+
+.Img {
+  height: 15vh;
+  margin-top: -3%;
+}
+
+.btn {
+  background: rgba(299, 9, 10, 1);
+  color: #fff;
+  font-size: 1rem;
+  padding: 5px 15px 10px 15px;
+  font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu,
+    sans-serif;
+  font-weight: 600;
+  border-radius: 5px;
+  display: block;
+  margin-left: auto;
+  margin-top: 33px;
+  margin-right: 10%;
+  height: 4vh;
+  border: none;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: rgb(107, 22, 22);
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn:focus {
+  background: #000;
+}
+
+.Text {
+  margin: 5% 35% 0 10%;
+}
+.h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+.h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.p1 {
+  color: #fff;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+}
+.p2 {
+  color: #fff;
+  margin: 3rem 0 0 0;
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+}
+.p3 {
+  color: #fff;
+  margin: 1rem 0 0 0;
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+}
+
+.form {
+  margin-top: 1.3rem;
+}
+
+.input {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1.1rem 2rem;
+  border: 1px solid gray;
+  width: 42%;
+  outline: none;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.btns {
+  background: rgba(299, 9, 10, 1);
+  border: none;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  color: #fff;
+  margin-left: 10px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.Images {
+  width: 100%;
+}
+
+.imgOne,
+.imgTwo,
+.imgThree,
+.imgFour {
+  border-radius: 10px;
+  /* height: 50vh; */
+  padding: 3% 10%;
+  background: rgb(10, 19, 59);
+  background: linear-gradient(
+    120deg,
+    rgba(10, 19, 59, 1) 0%,
+    rgba(49, 15, 39, 1) 69%,
+    rgba(101, 12, 44, 1) 100%
+  );
+}
+
+.div1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1%;
+  background: rgba(0, 8, 29, 0.6);
+  padding: 0rem 3rem 10% 3rem;
+  margin: -10% 0% 0% 0%;
+}
+
+.allMovies {
+  background: rgba(0, 8, 29, 0.9);
+  padding: 3% 0 0% 0;
+}
+
+.center {
+  display: grid;
+  place-items: center;
+}
+
+/* FAQ CSS START */
+.color {
+  background: rgba(0, 8, 29, 0.6);
+}
+.wrapper {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  justify-content: center;
+  padding-bottom: 5%;
+  align-items: center;
+  background: rgba(0, 8, 29, 0.9);
+}
+
+.accordion {
+  width: 80%;
+}
+
+.item {
+  background: #132144;
+  color: #fff;
+  margin-bottom: 7px;
+  padding: 0.5rem 1.5rem;
+  font-family: "Roboto", sans-serif;
+}
+.item:hover {
+  background: #243b75;
+}
+.title {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  margin-bottom: -15px;
+  display: flex;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.content.show {
+  padding-top: 1.2rem;
+  font-size: 1.2rem;
+  height: auto;
+  max-height: 9999px;
+  transition: all 0 9999px;
+}
+
+.plus {
+  font-size: 1.8rem;
+}
+
+.FAQ {
+  font-size: 2.5rem;
+  margin-left: 10%;
+  padding-bottom: 1rem;
+  margin-right: auto;
+  font-weight: 700;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.email {
+  margin-right: auto;
+  margin-left: 10%;
+  margin-top: -1.5%;
+  width: 80%;
+}
+
+.inputs {
+  background: rgba(36, 59, 117, 0.5);
+  padding: 1.1rem 2rem;
+  border: 1px solid gray;
+  width: 25%;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.inputs:focus {
+    border: 1px solid rgb(118, 207, 118);
+}
+.btnm {
+  background: rgba(299, 9, 10, 1);
+  border: none;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  color: #fff;
+  margin-left: 10px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+/* FAQ CSS ENDS */
+
+.FootSeg {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.wrappers {
+    justify-content: center;
+    padding: 5% 10%;
+    background: rgba(0, 8, 29, 0.9);
+  }
+
+  .footerText {
+    color: #fff;
+    font-size: .9rem;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 2.6% 0;
+  }
+
+  .footerH1 {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    text-decoration: underline;
+    padding-bottom: 2.5%;
+  }
+
+  .top {
+    margin-top: 1.5rem;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    padding: .5rem 1.5rem;
+    font-size: 1rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+    outline: none;
+  }
+
+  li {
+    color: #fff;
+    list-style: none;
+    margin-top: .7rem;
+    background: rgba(36, 59, 117, 0.5);
+    width: 8%;
+    padding: .5rem .8rem .2rem .8rem;
+  }
+
+  .SignUp {
+    background-image: url("../public/IMAGES/Netflix.jpg");
+    height: 100vh;
+  }
+
+  .navs {
+    background: rgba(0,0,0,.5);
+    height: 100vh;
+    width: 100%;
+  }
+  .links {
+    text-decoration: none;
+  }
+  /* SignUP start */
+  .Img {
+    height: 15vh;
+    margin-top: -2%;
+  }
+  .register {
+    background: rgba(0,0,0,.7);
+    justify-content: center;
+    display: grid;
+    margin: 0% 36%;
+    padding: 7% 5%;
+    place-items: center;
+  }
+
+  .Reg1 {
+    color: #fff;
+    margin-right: auto;
+    font-size: 2.3rem;
+    margin-bottom: 1.5rem;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .RegInputs {
+    width: 85%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    margin-top: 4%;
+    padding: 1.3rem 2rem;
+  }
+
+  .form-group {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .buttons {
+    background: rgba(299, 9, 10, 1);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    width: 107%;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    border-radius: 10px;
+    margin-top: 10%;
+  }
+
+  .sec p {
+    color: #fff;
+    font-size: .9rem;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .sec {
+    display: flex;
+    margin-top: 3%;
+    justify-content: space-between;
+}
+
+.link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+}
+
+.details .New {
+    color: rgb(85, 81, 81);
+    font-size: .9rem;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+}
+.details .Last {
+    color: rgb(85, 81, 81);
+    font-size: .7rem;
+    padding-top: .3rem;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+}
+
+.details  {
+    padding: 20% 0;
+}
+  /* SignUP ends */
+@media (max-width: 768px) {
+    .FootSeg {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .wrappers {
+        justify-content: center;
+        padding: 5% 10%;
+        background: rgba(0, 8, 29, 0.9);
+    }
+
+  .inputs {
+    background: rgba(36, 59, 117, 0.5);
+    padding: 1.1rem 2rem;
+    border: 1px solid gray;
+    width: 90%;
+    outline: none;
+    font-size: 1.3rem;
+    color: #fff;
+  }
+  .btnm {
+    background: rgba(299, 9, 10, 1);
+    border: none;
+    padding: 1rem 1.2rem;
+    cursor: pointer;
+    color: #fff;
+    margin-left: -0.3%;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .FAQ {
+    margin-left: 4.8%;
+    padding-bottom: 1rem;
+    margin-right: auto;
+    font-weight: 700;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+  }
+  .wrapper {
+    padding-top: 10%;
+  }
+  .title {
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: -15px;
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    margin: 10px 0;
+  }
+
+  .content.show {
+    padding-top: 10px;
+    font-size: 0.8rem;
+    height: auto;
+    max-height: 9999px;
+    transition: all 0 9999px;
+  }
+
+  .Images {
+    width: 120%;
+  }
+
+  .center {
+    display: grid;
+    place-items: center;
+  }
+
+  .h2 {
+    font-size: 1.5em;
+    font-weight: 900;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+  }
+  .p3 {
+    color: #fff;
+    margin: 1.4rem 0 0 0;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .backgroundEffect {
+    background: var(--gradient);
+    height: 77.1vh;
+    width: 100%;
+  }
+
+  .div1 {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    gap: 1%;
+    background: rgba(0, 8, 29, 0.6);
+    padding: 0rem 3rem 10% 3rem;
+    margin: -20% 0% 0% 0%;
+  }
+
+  .allMovies {
+    background: rgba(0, 8, 29, 0.9);
+    padding: 3% 0 0% 0;
+  }
+
+  .input {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 1.1rem 2rem;
+    border: 1px solid gray;
+    width: 51%;
+    outline: none;
+    font-size: 1.3rem;
+    color: #fff;
+  }
+
+  .btns {
+    background: rgba(299, 9, 10, 1);
+    border: none;
+    padding: 1rem 1.2rem;
+    cursor: pointer;
+    color: #fff;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .Text {
+    margin: 5% 15% 0 10%;
+  }
+
+  .Image {
+    position: absolute;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .p1 {
+    color: #fff;
+    margin: 0.6rem 0;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    width: auto;
+    font-family: Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+  }
+
+  .p2 {
+    color: #fff;
+    margin: 1.7rem 0 0 0;
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .backgroundEffect {
+    position: relative;
+    background: var(--gradient);
+    height: 100vh;
+    width: 100%;
+  }
+}
+@media (max-width: 425px) {
+    .FootSeg {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    .wrappers {
+        justify-content: center;
+        padding: 5% 10%;
+        background: rgba(0, 8, 29, 0.9);
+    }
+
+  .title {
+    font-size: 0.8rem;
+    margin-top: 10px;
+    margin-bottom: -15px;
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .wrapper {
+    padding-top: 8%;
+  }
+  .div1 {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr;
+    gap: 1%;
+    background: rgba(0, 8, 29, 0.6);
+    padding: 0rem 3rem 10% 3rem;
+    margin: -20% 0% 0% 0%;
+  }
+
+  .input {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 1.1rem 2rem;
+    border: 1px solid gray;
+    width: 88%;
+    outline: none;
+    font-size: 1.3rem;
+    color: #fff;
+  }
+
+  .btns {
+    background: rgba(299, 9, 10, 1);
+    border: none;
+    padding: 1rem 1.2rem;
+    cursor: pointer;
+    color: #fff;
+    margin-top: 20px;
+    margin-left: 0px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .Text {
+    margin: 1% 15% 0 10%;
+  }
+  .p1 {
+    color: #fff;
+    margin: 0.6rem 0;
+    width: auto;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    width: auto;
+    color: #fff;
+    width: auto;
+    font-family: Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+  }
+
+  .p2 {
+    color: #fff;
+    width: auto;
+    margin: 1.4rem 0 0 0;
+    font-size: 1rem;
+    width: auto;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .Image {
+    position: absolute;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+  }
+  .backgroundEffect {
+    position: relative;
+    background: var(--gradient);
+    height: 100vh;
+    width: 100%;
+  }
 }
