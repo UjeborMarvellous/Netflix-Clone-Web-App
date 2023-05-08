@@ -426,6 +426,17 @@
 }
   /* SignUP ends */
 @media (max-width: 768px) {
+    .register {
+        margin: 0 10%;
+    }
+
+    .buttons{
+        width: 100%;
+    }
+
+    .details  {
+        padding: 10% 0;
+    }
     .FootSeg {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -603,6 +614,13 @@
   }
 }
 @media (max-width: 425px) {
+    .details  {
+        padding: 20% 0;
+    }
+
+    .RegInputs {
+        width: 79%;
+    }
     .FootSeg {
         display: grid;
         grid-template-columns: 1fr;
